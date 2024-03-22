@@ -1,53 +1,47 @@
 .App {
-  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-h1 {
-  color: #333;
-}
-
-form {
-  margin: 20px;
-}
-
-.nameInput, .messageInput {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 300px;
-}
-
-.messageInput {
-  height: 100px;
-  resize: vertical;
-}
-
-.submitButton {
-  padding: 10px 20px;
-  background-color: #007bff;
+.toolbar {
+  background-color: #333;
   color: white;
-  border: none;
-  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.toolbar h1 {
+  margin: 0;
+}
+
+.toolbar button {
+  padding: 10px 20px;
   cursor: pointer;
 }
 
-.submitButton:hover {
-  background-color: #0056b3;
+.introduction,
+.message-board {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.messages {
-  margin-top: 20px;
+.message-board form {
+  display: flex;
+  flex-direction: column;
 }
 
-.message {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+.message-board form input,
+.message-board form textarea {
+  margin-bottom: 10px;
   padding: 10px;
-  margin: 10px 0;
-  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.message strong {
-  color: #007bff;
+.message-board form button {
+  padding: 10px 20px;
+  cursor: pointer;
 }
