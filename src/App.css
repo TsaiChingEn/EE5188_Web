@@ -118,11 +118,13 @@ body {
 
 .intro-photo {
   max-width: 100%;
+  align-items: center;
   height: auto;
 }
 
 .introduction p {
   margin: 0;
+  align-items: center;
   font-size: 1.1em;
   color: #5cacee;
 }
