@@ -1,72 +1,69 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
-  const [currentPage, setCurrentPage] = useState('board'); // 'board' or 'intro'
+const App = () => {
+  // State to hold the list of messages
   const [messages, setMessages] = useState([]);
+  // State to hold the current page ('board' or 'introduction')
+  const [currentPage, setCurrentPage] = useState('board');
+  // State to hold the form inputs
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
-  const [selectedFile, setSelectedFile] = useState(null);
 
-  useEffect(() => {
-    // TODO: Fetch messages from the backend and update state
-  }, []);
-
-  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
-  };
-
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
-
-  const handleMessageChange = (event) => {
-    setMessage(event.target.value);
-  };
-
+  // Function to handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    // TODO: Upload the photo and message to the backend
-    // Reset the form
+    const newMessage = { name, message };
+    setMessages([...messages, newMessage]);
     setName('');
     setMessage('');
-    setSelectedFile(null);
+  };
+
+  // Function to switch pages
+  const switchPage = (page) => {
+    setCurrentPage(page);
   };
 
   return (
     <div className="App">
       <div className="toolbar">
         <h1>Message Board</h1>
-        <button onClick={() => setCurrentPage('intro')}>Introduction</button>
-        <button onClick={() => setCurrentPage('board')}>Message Board</button>
-        <span className="message-counter">{messages.length} Messages</span>
+        <button onClick={() => switchPage('introduction')}>Introduction</button>
+        <button onClick={() => switchPage('board')}>Message Board</button>
+        <span className="message-counter">Messages: {messages.length}</span>
       </div>
-      {currentPage === 'intro' && (
-        <div className="introduction">
-          <p>Welcome to the Message Board. Please share your thoughts and photos with us!</p>
-        </div>
-      )}
       {currentPage === 'board' && (
-        <div>
+        <div className="message-board">
           <form onSubmit={handleSubmit}>
-            <input type="text" value={name} onChange={handleNameChange} placeholder="Your name" required />
-            <textarea value={message} onChange={handleMessageChange} placeholder="Your message" required />
-            <input type="file" onChange={handleFileChange} accept="image/*" required />
+            <input
+              type="text"
+              placeholder="Your Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <textarea
+              placeholder="Your Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
             <button type="submit">Post Message</button>
           </form>
           <div className="messages">
             {messages.map((msg, index) => (
               <div key={index} className="message">
-                <img src={msg.photoUrl} alt="User upload" />
-                <p><strong>{msg.name}</strong></p>
-                <p>{msg.message}</p>
+                <strong>{msg.name}</strong>: {msg.message}
               </div>
             ))}
           </div>
         </div>
       )}
+      {currentPage === 'introduction' && (
+        <div className="introduction">
+          <p>Welcome to our message board. Feel free to leave a message!</p>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;
