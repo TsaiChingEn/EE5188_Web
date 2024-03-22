@@ -68,7 +68,7 @@ const App = () => {
             <p>Welcome to our message</p>
           </div>
           <div>
-            <div>Welcome!</div>
+            <h5>Welcome!</h5>
             <p>Welcome to our message board. Feel free to leave a message!</p>
           </div>
         </div>

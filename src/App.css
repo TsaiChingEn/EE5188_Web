@@ -119,7 +119,6 @@ body {
 .intro-photo {
   max-width: 100%;
   height: auto;
-  margin-left: 80px;
   margin-right: 80px;
 }
 
@@ -127,6 +126,12 @@ body {
   margin: 0;
   font-size: 1.1em;
   color: #5cacee;
+}
+
+.introduction h5 {
+  margin: 0;
+  font-size: 1.3em;
+  color: #1a146d;
 }
 
 /* Additional CSS for animations and transitions */
