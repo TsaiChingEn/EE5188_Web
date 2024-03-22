@@ -1,63 +1,65 @@
-/* App.css */
 .App {
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+.toolbar {
+  background-color: #333;
   color: white;
-  padding: 0 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav button {
-  margin: 0 10px;
-  padding: 5px 10px;
+.toolbar h1 {
+  margin: 0;
+}
+
+.toolbar button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
-nav span {
-  margin-left: 20px;
+.toolbar button:hover {
+  background-color: #777;
 }
 
-.introduction, .message-board {
+.toolbar .message-counter {
+  background-color: #555;
+  padding: 10px 20px;
+}
+
+.introduction {
   padding: 20px;
 }
 
-.message-board h2, .introduction h2 {
-  margin-bottom: 20px;
-}
-
-.message-form {
-  margin-bottom: 20px;
-}
-
-.messages .message {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.messages .message img {
-  max-width: 100px;
-  max-height: 100px;
+form {
+  margin-top: 20px;
 }
 
 form input, form textarea, form button {
-  display: block;
-  margin: 10px auto;
+  margin: 10px 0;
   padding: 10px;
+  width: 90%;
 }
 
-form input, form textarea {
-  width: 80%;
+.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-form button {
-  width: 50%;
-  cursor: pointer;
+.message {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  padding: 20px;
+  width: 90%;
+}
+
+.message img {
+  max-width: 100%;
+  height: auto;
 }
