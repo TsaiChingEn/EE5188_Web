@@ -1,19 +1,19 @@
 .App {
   font-family: 'Roboto', sans-serif;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 0 20px;
 }
 
 .toolbar {
-  background-color: #007bff;
-  color: white;
+  background-color: #e3f2fd;
+  color: #5cacee;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
 }
 
 .toolbar h1 {
@@ -23,8 +23,8 @@
 
 .toolbar button {
   padding: 8px 15px;
-  background-color: #0056b3;
-  color: white;
+  background-color: #bbdefb;
+  color: #5cacee;
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -32,21 +32,26 @@
 }
 
 .toolbar button:hover {
-  background-color: #003d82;
+  background-color: #90caf9;
 }
 
 .toolbar .message-counter {
-  background-color: #0056b3;
+  background-color: #bbdefb;
   padding: 8px 15px;
   border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.toolbar .message-counter:hover {
+  background-color: #90caf9;
 }
 
 .message-board form {
   margin-top: 30px;
-  background: #f8f9fa;
+  background: #f1f8e9;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.1);
 }
 
 .message-board input,
@@ -54,13 +59,13 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ced4da;
+  border: 1px solid #bbdefb;
   border-radius: 3px;
 }
 
 .message-board button {
   padding: 10px 20px;
-  background-color: #28a745;
+  background-color: #64b5f6;
   color: white;
   border: none;
   border-radius: 3px;
@@ -69,7 +74,7 @@
 }
 
 .message-board button:hover {
-  background-color: #218838;
+  background-color: #42a5f5;
 }
 
 .messages {
@@ -81,24 +86,30 @@
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.message:hover {
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
 }
 
 .message strong {
-  color: #007bff;
+  color: #42a5f5;
 }
 
 .introduction {
   padding: 20px;
-  background-color: #f7f7f7;
+  background-color: #e3f2fd;
   border-radius: 5px;
   margin-top: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.1);
 }
 
 .introduction p {
   margin: 0;
   font-size: 1.1em;
+  color: #5cacee;
 }
 
 /* Additional CSS for animations and transitions */
@@ -120,9 +131,4 @@
 
 .toolbar button:hover {
   transform: scale(1.05);
-}
-
-/* Hover effect for message counter */
-.toolbar .message-counter:hover {
-  background-color: #004c8c;
 }
