@@ -100,3 +100,29 @@
   margin: 0;
   font-size: 1.1em;
 }
+
+/* Additional CSS for animations and transitions */
+
+/* Fade-in animation for messages */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Scale effect on buttons */
+.toolbar button {
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.toolbar button:hover {
+  transform: scale(1.05);
+}
+
+/* Hover effect for message counter */
+.toolbar .message-counter:hover {
+  background-color: #004c8c;
+}
