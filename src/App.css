@@ -5,10 +5,10 @@
 .toolbar {
   background-color: #333;
   color: white;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
 }
 
 .toolbar h1 {
@@ -16,32 +16,50 @@
 }
 
 .toolbar button {
-  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
-.introduction,
-.message-board {
-  margin: 20px;
+.toolbar button:hover {
+  background-color: #777;
+}
+
+.content {
+  margin-top: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+}
+
+.introduction {
+  text-align: center;
 }
 
 .message-board form {
   display: flex;
   flex-direction: column;
+  width: 300px;
+  margin: auto;
 }
 
-.message-board form input,
-.message-board form textarea {
+.message-board input, .message-board textarea {
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-.message-board form button {
-  padding: 10px 20px;
+.message-board button {
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+}
+
+.message-board button:hover {
+  background-color: #4cae4c;
 }
