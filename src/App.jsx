@@ -2,57 +2,73 @@ import React, { useState } from 'react';
 import './App.css';
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('home');
-
-  const navigate = (page) => {
-    setCurrentPage(page);
-  };
-
-  return (
-    <div className="App">
-      <div className="toolbar">
-        <h1>Message Board</h1>
-        <button onClick={() => navigate('home')}>Introduction</button>
-        <button onClick={() => navigate('board')}>Message Board</button>
-      </div>
-      {currentPage === 'home' && <Introduction />}
-      {currentPage === 'board' && <MessageBoard />}
-    </div>
-  );
-};
-
-const Introduction = () => (
-  <div className="introduction">
-    <h2>Welcome to Our Message Board</h2>
-    <p>This is a place where you can leave messages and communicate with others. Feel free to share your thoughts!</p>
-  </div>
-);
-
-const MessageBoard = () => {
-  const [messages, setMessages] = useState([]);
+  const [page, setPage] = useState('board');
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([]);
 
-  const submitMessage = () => {
-    const newMessage = { name, message };
-    setMessages([...messages, newMessage]);
-    setName('');
-    setMessage('');
+  const handleNameChange = (event) => {
+    setName(event.target.value);
   };
 
-  return (
+  const handleMessageChange = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (name && message) {
+      setMessages([...messages, { name, message }]);
+      setName('');
+      setMessage('');
+    }
+  };
+
+  const renderToolbar = () => (
+    <div className="toolbar">
+      <h1>Message Board</h1>
+      <button onClick={() => setPage('intro')}>Introduction</button>
+      <button onClick={() => setPage('board')}>Message Board</button>
+    </div>
+  );
+
+  const renderIntroduction = () => (
+    <div className="introduction">
+      <h2>Welcome to the Message Board Site!</h2>
+      <p>This is a simple message board where you can leave your name and a message for others to see.</p>
+    </div>
+  );
+
+  const renderMessageBoard = () => (
     <div className="message-board">
-      <h2>Leave a Message</h2>
-      <input type="text" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
-      <textarea placeholder="Your Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-      <button onClick={submitMessage}>Submit</button>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Your name"
+          value={name}
+          onChange={handleNameChange}
+        />
+        <textarea
+          placeholder="Your message"
+          value={message}
+          onChange={handleMessageChange}
+        ></textarea>
+        <button type="submit">Post Message</button>
+      </form>
       <div className="messages">
         {messages.map((msg, index) => (
           <div key={index} className="message">
-            <p><strong>{msg.name}</strong>: {msg.message}</p>
+            <strong>{msg.name}</strong>: {msg.message}
           </div>
         ))}
       </div>
+    </div>
+  );
+
+  return (
+    <div className="App">
+      {renderToolbar()}
+      {page === 'intro' ? renderIntroduction() : renderMessageBoard()}
     </div>
   );
 };

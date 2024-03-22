@@ -6,51 +6,51 @@
   background-color: #333;
   color: white;
   padding: 10px 0;
-}
-
-.toolbar h1 {
-  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .toolbar button {
+  padding: 10px;
   margin: 0 10px;
-  padding: 5px 10px;
-  background-color: #555;
-  color: white;
-  border: none;
   cursor: pointer;
 }
 
-.toolbar button:hover {
-  background-color: #777;
-}
-
-.introduction, .message-board {
+.introduction {
   margin: 20px;
-  text-align: left;
+  padding: 20px;
+  border: 1px solid #ccc;
 }
 
-.message-board input, .message-board textarea {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  width: calc(100% - 22px); /* Adjust for padding */
+.message-board {
+  margin: 20px;
 }
 
+.message-board form {
+  margin-bottom: 20px;
+}
+
+.message-board input,
+.message-board textarea,
 .message-board button {
-  padding: 5px 10px;
-  background-color: #555;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.message-board button:hover {
-  background-color: #777;
-}
-
-.messages .message {
-  background-color: #f0f0f0;
   margin: 10px 0;
   padding: 10px;
+  width: 95%;
+}
+
+.messages {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.message {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.message strong {
+  margin-right: 10px;
 }
