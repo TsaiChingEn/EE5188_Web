@@ -1,60 +1,75 @@
 .App {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .toolbar {
-  background-color: #333;
+  background-color: #007bff;
   color: white;
-  padding: 10px;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .toolbar h1 {
   margin: 0;
+  font-size: 1.5em;
 }
 
 .toolbar button {
-  margin-right: 10px;
-  padding: 5px 10px;
-  background-color: #555;
+  padding: 8px 15px;
+  background-color: #0056b3;
   color: white;
   border: none;
+  border-radius: 3px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .toolbar button:hover {
-  background-color: #777;
+  background-color: #003d82;
 }
 
 .toolbar .message-counter {
-  background-color: #555;
-  padding: 5px 10px;
+  background-color: #0056b3;
+  padding: 8px 15px;
+  border-radius: 3px;
 }
 
 .message-board form {
-  margin-top: 20px;
+  margin-top: 30px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .message-board input,
 .message-board textarea {
-  display: block;
-  margin-bottom: 10px;
   width: 100%;
   padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
 }
 
 .message-board button {
   padding: 10px 20px;
-  background-color: #5cb85c;
+  background-color: #28a745;
   color: white;
   border: none;
+  border-radius: 3px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .message-board button:hover {
-  background-color: #4cae4c;
+  background-color: #218838;
 }
 
 .messages {
@@ -62,11 +77,26 @@
 }
 
 .message {
-  border-bottom: 1px solid #eee;
-  padding: 10px 0;
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message strong {
+  color: #007bff;
 }
 
 .introduction {
   padding: 20px;
   background-color: #f7f7f7;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.introduction p {
+  margin: 0;
+  font-size: 1.1em;
 }
