@@ -119,14 +119,14 @@ body {
 .intro-photo {
   max-width: 100%;
   height: auto;
-  margin-right: 30px; /* Add some space between the photo and the text */
+  margin-right: 50px; /* Add some space between the photo and the text */
 }
 
 .introduction p {
   margin: 0;
   font-size: 1.1em;
   color: #5cacee;
-  align-content: center;
+  align-self: center;
 }
 
 /* Additional CSS for animations and transitions */
