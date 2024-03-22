@@ -102,6 +102,10 @@
   color: #42a5f5;
 }
 
+body {
+  padding-top: 70px;
+}
+
 .introduction {
   display: flex;
   align-items: center;
