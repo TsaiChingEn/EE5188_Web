@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
 .toolbar {
@@ -16,10 +16,11 @@
 }
 
 .toolbar button {
+  margin-right: 10px;
+  padding: 5px 10px;
   background-color: #555;
   color: white;
   border: none;
-  padding: 10px 20px;
   cursor: pointer;
 }
 
@@ -29,37 +30,43 @@
 
 .toolbar .message-counter {
   background-color: #555;
+  padding: 5px 10px;
+}
+
+.message-board form {
+  margin-top: 20px;
+}
+
+.message-board input,
+.message-board textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.message-board button {
   padding: 10px 20px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.message-board button:hover {
+  background-color: #4cae4c;
+}
+
+.messages {
+  margin-top: 20px;
+}
+
+.message {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
 }
 
 .introduction {
   padding: 20px;
-}
-
-form {
-  margin-top: 20px;
-}
-
-form input, form textarea, form button {
-  margin: 10px 0;
-  padding: 10px;
-  width: 90%;
-}
-
-.messages {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.message {
-  border: 1px solid #ccc;
-  margin-top: 20px;
-  padding: 20px;
-  width: 90%;
-}
-
-.message img {
-  max-width: 100%;
-  height: auto;
+  background-color: #f7f7f7;
 }
