@@ -8,7 +8,7 @@
 .toolbar {
   position: fixed;
   top: 0;
-  width: 80%;
+  width: 90%;
   background-color: #e3f2fd;
   color: #5cacee;
   padding: 15px 20px;
@@ -100,10 +100,6 @@
 
 .message strong {
   color: #42a5f5;
-}
-
-body {
-  padding-top: 70px;
 }
 
 .introduction {
