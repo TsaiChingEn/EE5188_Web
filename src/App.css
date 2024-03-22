@@ -110,7 +110,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   padding: 20px;
   background-color: #f1f8e9;
   border-radius: 5px;
