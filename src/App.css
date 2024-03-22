@@ -129,12 +129,6 @@ body {
   color: #5cacee;
 }
 
-.introduction div {
-  margin: 0;
-  font-size: 1.5em;
-  color: #080b99;
-}
-
 /* Additional CSS for animations and transitions */
 
 /* Fade-in animation for messages */
