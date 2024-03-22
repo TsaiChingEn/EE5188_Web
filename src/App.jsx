@@ -64,7 +64,8 @@ const App = () => {
         <div className="introduction">
           <h6>
             <img src="photo3.png" alt="Introduction" className="intro-photo" align="center"/>
-            Welcome!
+            <div>Welcome!</div>
+            <p>Welcome to our message board. Feel free to leave a message!</p>
           </h6>
           <p>Welcome to our message board. Feel free to leave a message!</p>
           <p>This is a platform where you can share your thoughts and connect with others.</p>

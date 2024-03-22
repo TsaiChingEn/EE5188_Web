@@ -120,7 +120,6 @@ body {
 .intro-photo {
   max-width: 100%;
   height: auto;
-  margin-bottom: 20px; /* Add some space between the photo and the text */
 }
 
 .introduction p {
