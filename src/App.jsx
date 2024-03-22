@@ -61,15 +61,11 @@ const App = () => {
         </div>
       )}
       {currentPage === 'introduction' && (
-        <div>
-          <div className="introduction">
-            <img src="photo1.png" alt="Introduction" className="intro-photo"/>
-            <div>Welcome!</div>
-          </div>
-          <div className="introduction">
-            <p>Welcome to our message board. Feel free to leave a message!</p>
-            <p>This is a platform where you can share your thoughts and connect with others.</p>
-          </div>
+        <div className="introduction">
+          <img src="photo1.png" alt="Introduction" className="intro-photo"/>
+          <p>Welcome!</p>
+          <p>Welcome to our message board. Feel free to leave a message!</p>
+          <p>This is a platform where you can share your thoughts and connect with others.</p>
         </div>
       )}
     </div>
