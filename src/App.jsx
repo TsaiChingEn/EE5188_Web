@@ -64,8 +64,8 @@ const App = () => {
         <div className="introduction">
           <div>
             <img src="img/img4.png" alt="Introduction" className="intro-photo" align="center"/>
-            <p>國立臺灣大學 電機資安所</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;蔡謦恩</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;國立臺灣大學 電機資安所</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;蔡謦恩</p>
           </div>
           <div>
             <h5>Welcome!</h5>
