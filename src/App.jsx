@@ -63,9 +63,9 @@ const App = () => {
       {currentPage === 'introduction' && (
         <div className="introduction">
           <div>
-            <img src="img/photo3.png" alt="Introduction" className="intro-photo" align="center"/>
-            <p>Welcome!</p>
-            <p>Welcome to our message</p>
+            <img src="img/img1.png" alt="Introduction" className="intro-photo" align="center"/>
+            <p>國立臺灣大學 電機資安所</p>
+            <p>        蔡謦恩</p>
           </div>
           <div>
             <h5>Welcome!</h5>
