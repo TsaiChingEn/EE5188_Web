@@ -30,10 +30,10 @@ const App = () => {
   return (
     <div className="App">
       <div className="toolbar">
-        <h1>Message Board</h1>
-        <button onClick={() => switchPage('introduction')}>Introduction</button>
-        <button onClick={() => switchPage('board')}>Message Board</button>
-        <span className="message-counter">Users: {uniqueUsers.size}</span>
+        <h1>網路攻防實習</h1>
+        <button onClick={() => switchPage('introduction')}>About</button>
+        <button onClick={() => switchPage('board')}>Chat</button>
+        <span className="message-counter">參觀人數: {uniqueUsers.size}</span>
       </div>
       {currentPage === 'board' && (
         <div className="message-board">
@@ -63,7 +63,7 @@ const App = () => {
       {currentPage === 'introduction' && (
         <div className="introduction">
           <div>
-            <img src="img/photo2.png" alt="Introduction" className="intro-photo" align="center"/>
+            <img src="img/photo3.png" alt="Introduction" className="intro-photo" align="center"/>
             <p>Welcome!</p>
             <p>Welcome to our message</p>
           </div>
