@@ -63,7 +63,7 @@ const App = () => {
       {currentPage === 'introduction' && (
         <div className="introduction">
           <div>
-            <img src="img/photo1.png" alt="Introduction" className="intro-photo" align="center"/>
+            <img src="img/photo2.png" alt="Introduction" className="intro-photo" align="center"/>
             <p>Welcome!</p>
             <p>Welcome to our message</p>
           </div>
